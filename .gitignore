@@ -2,3 +2,5 @@ node_modules
 bundle.js
 archive
 todo.txt
+dist
+fb-getter.js
