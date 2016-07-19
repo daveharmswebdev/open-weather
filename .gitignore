@@ -4,3 +4,5 @@ archive
 todo.txt
 dist
 fb-getter.js
+bower_components
+owaKey.js

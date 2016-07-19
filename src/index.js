@@ -3,19 +3,13 @@
 
 const $ = require('jQuery');
 
-$(function() {
-  const login = require('../src/users');
-  const model = require('../src/model');
+$(function() {  const login = require('../src/users');
   const view = require('../src/view');
-  let currentUser = null;
+  const control = require('../src/control');
 
-  // login()
-  // .then(function(result) {
-  //   currentUser = result.user.uid;
-  //   console.log(currentUser);
-  //   view.renderMain();
-  // });
-
+  // render what is static
   view.renderMain();
+  // manage what is dynamic
+  control();
 
 });
