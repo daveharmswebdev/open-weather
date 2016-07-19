@@ -39,7 +39,7 @@ let customOpts = {
   transform: ['jadeify']
 };
 let opts = Object.assign({}, watchify.args, customOpts);
-let bundler = watchify(browserify(opts)); 
+let bundler = watchify(browserify(opts));
 bundler.on('update', bundle); // on any dep update, runs the bundler
 bundler.on('log', gutil.log); // output build logs to terminal
 
@@ -64,7 +64,7 @@ gulp.task('browserify', bundle);
   Not optional. You should always be validating your JavaScript
  */
 gulp.task('lint', function() {
-  return gulp.src(['./src/**/*.js'])
+  return gulp.src(['./src/**/*.js', './src/specs/**/*.js'])
     .pipe(jshint())
     .pipe(jshint.reporter('jshint-stylish'))
     .on('error', function() { });
@@ -120,7 +120,7 @@ gulp.task('sass', function() {
  */
 gulp.task('watch', function() {
   // Run the link task when any JavaScript file changes
-  gulp.watch(['./src/**/*.js'], ['lint', 'specs']);
+  gulp.watch(['./src/**/*.js', './src/specs/**/*.js'], ['lint', 'specs']);
 
   // Run the sass task when any SCSS file changes
   // Remov if not using SASS
