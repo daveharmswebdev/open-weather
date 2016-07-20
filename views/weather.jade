@@ -1,0 +1,16 @@
+div.container.weather
+  p.weatherDisplay.weather--temp= 'Temp: ' + parsedWeather.temp
+  p.weatherDisplay.weather--conditions= 'Conditions: ' + parsedWeather.conditions
+  p.weatherDisplay.weather--airPressure= 'Air Pressure: ' + parsedWeather.airPressure
+  p.weatherDisplay.weather--windSpeed= 'Windspeed: ' + parsedWeather.windSpeed
+  button#saveWeather.btn.btn-success Save Weather
+div.container.row.extendedForecasts
+  div.col-xs-4.xForeCast--current
+    button#button-getCurrentX.btn.btn-default Full Current
+    div.display--current
+  div.col-xs-4.xForeCast--three
+    button#button-getThree.btn.btn-default Three Day 
+    div.display--three
+  div.col-xs-4.xForeCast--seven
+    button#button-getSeven.btn.btn-default Seven Day
+    div.display--seven

@@ -1,10 +1,14 @@
 'use strict';
 
-const parse = {}
+const parse = {};
 
 parse.weather = function(object) {
+  console.log(object);
   let weather = {};
-  weather.test = 'test';
+  weather.temp = object.main.temp;
+  weather.conditions = object.weather[0].description;
+  weather.airPressure = object.main.pressure;
+  weather.windSpeed = object.wind.speed;
   return weather;
 };
 
